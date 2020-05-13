@@ -1,6 +1,7 @@
 # c:\xampp\mysql\bin\mysql -uedunova -pedunova < c:\jp22\hello\galerija.sql
 drop database if exists galerija;
 create database galerija;
+use galerija;
 
 create table slika(
     sifra int not null primary key auto_increment,
