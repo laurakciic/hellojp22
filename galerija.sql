@@ -19,26 +19,31 @@ create table autor(
 
 create table sponzor(
     sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar(50),
+    ime varchar(50) not null,
+    prezime varchar(50) not null,
+    email varchar(100),
     slika int not null
 );
 
 alter table sponzor add foreign key (slika) references slika(sifra);
 alter table slika add foreign key (autor) references autor(sifra);
 
+# describe autor;
 insert into autor(ime, prezime)
 values
 ('Pablo', 'Picasso'),
 ('Edvard', 'Munch');
-select * from autor;
+# select * from autor;
 
-describe slika;
+# describe slika;
 insert into slika(tema, autor)
 values
 ('Dječak s lulom', 1),
 ('Krik', 2);
-select * from slika;
+# select * from slika;
 
-
-
+# describe sponzor;
+insert into sponzor(ime, prezime, slika)
+values('Ivan', 'Ivić', 1),
+('Pero', 'Peric', 2);
+# select * from sponzor;
