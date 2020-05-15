@@ -32,18 +32,21 @@ alter table slika add foreign key (autor) references autor(sifra);
 insert into autor(ime, prezime)
 values
 ('Pablo', 'Picasso'),
-('Edvard', 'Munch');
+('Edvard', 'Munch'),
+('Gustav', 'Klimt');
 # select * from autor;
 
 # describe slika;
 insert into slika(tema, autor)
 values
 ('Dječak s lulom', 1),
-('Krik', 2);
+('Krik', 2),
+('Portret Adele Bloh-Bauer', 3);
 # select * from slika;
 
 # describe sponzor;
 insert into sponzor(ime, prezime, slika)
 values('Ivan', 'Ivić', 1),
-('Pero', 'Peric', 2);
+('Pero', 'Peric', 2),
+('Goran', 'Gogić', 3);
 # select * from sponzor;
