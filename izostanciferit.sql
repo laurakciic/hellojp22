@@ -17,7 +17,8 @@ create table kolegij(
 	semestar int,
 	satipredavanja varchar(50),
 	sativjezbi varchar(50),
-	brojects int);
+	brojects int,
+	nositelj varchar(50));
 
 create table izostanak(
 	sifra int not null primary key auto_increment,
