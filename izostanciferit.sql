@@ -51,5 +51,13 @@ alter table student add foreign key (grupa) references grupa(sifra);
 
 # smjer, kolegij, grupa, student, izostanak
 show tables;
+describe smjer;
+insert into smjer(naziv) values
+('Preddiplomski sveučilišni studij elektrotehnika'),
+('Preddiplomski sveučilišni studij računarstvo'),
+('Preddiplomski stručni studij računarstvo'),
+('Preddiplomski stručni studij automatika'),
+('Preddiplomski stručni studij energetika');
+select * from smjer;
 
 
