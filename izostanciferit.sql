@@ -8,7 +8,7 @@ create table izostanak(
 	kolegij int not null,
 	student int not null,
 	brsati int,
-	datum datetime);
+	datum datetime not null);
 
 create table student(
 	sifra int not null primary key auto_increment,
@@ -16,13 +16,13 @@ create table student(
 	prezime varchar(50) not null,
 	smjer int not null,
 	grupa int,
-	godina varchar(10) not null,
+	godina varchar(10),
 	jmbag char(10));
 
 create table kolegij(
 	sifra int not null primary key auto_increment,
 	naziv varchar(50) not null,
-	semestar int,
+	semestar int not null,
 	satipredavanja varchar(50),
 	sativjezbi varchar(50),
 	brojects int not null,
@@ -31,13 +31,13 @@ create table kolegij(
 create table grupa(
 	sifra int not null primary key auto_increment,
 	naziv varchar (50) not null,
-	smjer int,
-	kolegij int, 
+	smjer int not null,
+	kolegij int not null, 
 	student int);
 
 create table smjer(
 	sifra int not null primary key auto_increment,
-	naziv varchar(50));
+	naziv varchar(50) not null);
 
 alter table izostanak add foreign key (kolegij) references kolegij(sifra);
 alter table izostanak add foreign key (student) references student(sifra);
@@ -48,4 +48,8 @@ alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table grupa add foreign key (kolegij) references kolegij(sifra);
 
 alter table student add foreign key (grupa) references grupa(sifra);
+
+# smjer, kolegij, grupa, student, izostanak
+show tables;
+
 
