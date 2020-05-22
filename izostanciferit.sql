@@ -71,5 +71,14 @@ insert into smjer(naziv) values
 select * from smjer;
 
 describe kolegij;
+insert into kolegij (naziv, semestar, brojects) values
+# RAČUNARSTVO STRUČNI 1. SEMESTAR
+('Matematika za računarstvo I', 1, 5),
+('Fizika', 1, 5),
+('Osnove elektrotehnike', 1, 6),
+('Tjelesna kultura I', 1, 1),
+('Inženjerska grafika', 1, 4),
+('Programiranje I', 1, 7),
+('Engleski jezik I', 1, 2);
 
 
