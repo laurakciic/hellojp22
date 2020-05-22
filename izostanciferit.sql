@@ -33,7 +33,7 @@ create table grupa(
 
 create table smjer(
 	sifra int not null primary key auto_increment,
-	naziv varchar(50) not null);
+	naziv varchar(100) not null);
 
 create table clan(
 	sifra int not null primary key auto_increment,
@@ -55,11 +55,21 @@ alter table kolegij add foreign key (smjer) references smjer(sifra);
 show tables;
 describe smjer;
 insert into smjer(naziv) values
-('Preddiplomski sveučilišni studij elektrotehnika'),
-('Preddiplomski sveučilišni studij računarstvo'),
-('Preddiplomski stručni studij računarstvo'),
-('Preddiplomski stručni studij automatika'),
-('Preddiplomski stručni studij energetika');
+('Preddiplomski sveučilišni studij Elektrotehnika i informacijska tehnologija'),
+('Preddiplomski sveučilišni studij Računarstvo'),
+('Preddiplomski stručni studij Računarstvo'),
+('Preddiplomski stručni studij Automatika'),
+('Preddiplomski stručni studij Energetika'),
+('Diplomski sveučilišni studij Automobilsko računarstvo i komunikacije'),
+('Diplomski sveučilišni studij Elektrotehnika, smjer komunikacije i informatika'),
+('Diplomski sveučilišni studij Elektrotehnika, smjer Elektroenergetika'),
+('Diplomski sveučilišni studij Računarstvo'),
+('Poslijediplomski sveučilišni studij elektrotehnike i računarstva'),
+('Poslijediplomski specijalistički studij, smjer napredne komunikacijske tehnologije'),
+('Poslijediplomski specijalistički studij, smjer procesno računarstvo'),
+('Poslijediplomski specijalistički studij, smjer Elektroenergetske mreže u tržišnom okruženju');
 select * from smjer;
+
+describe kolegij;
 
 
